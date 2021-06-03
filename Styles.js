@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
-  album :{
+  album:{
     marginLeft: 'auto',
     marginRight: 'auto'
   },
@@ -10,6 +10,16 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     width: 200
+  },
+  button: {
+    width: 300,
+    height: 42,
+    backgroundColor: '#cd853f',
+    marginTop: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+ 
   },
   albumInput:{
   display: "flex",
@@ -26,29 +36,41 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginLeft: 'auto',
     marginRight: 'auto',
-    backgroundColor: 'black',
+    //backgroundColor: 'black',
     width: 70,
   },
   infoText:{
     color: 'white',
-    marginTop: 20,
-    marginLeft: 10,
+    //marginTop: 20,
+    //marginLeft: 10,
+  },
+  infoText2:{
+    display: 'flex',
+    color: 'white',
+    //marginTop: 20,
+    alignItems: 'flex-start',
+
   },
   makeColumn:{
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'center',
     justifyContent: 'center',
+    margin: '6%',
   },
-  tracksButton :{
-    backgroundColor: '#1ED760',
+  tracksButton:{
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+    display:'flex',
     color: '#fff',
     fontWeight: 'bold',
-    padding: 10,
-    width: 100,
+    padding: 5,
+    width: 200,
     borderRadius: 8,
-    border: 'none',
-    marginTop: 20,
+    marginTop: 10,
     marginLeft: 10,
+    alignSelf: 'center'
   },
   
   track :{
@@ -59,13 +81,13 @@ const styles = StyleSheet.create({
     marginLeft: 'auto',
     marginRight: 'auto',
     backgroundColor: 'gray',
-    marginTop: 5,
+    marginTop: 10,
     marginBottom: 5,
     
   },
   
   
-  trackField :{
+  trackField:{
     display: 'flex',
     alignItems: 'center',
     color: '#1ED760',
@@ -90,10 +112,6 @@ const styles = StyleSheet.create({
     color: '#000',
     borderRadius: 10,
   },
-  
-  tracksButton:{
-    fontWeight: 'bold',
-  },
   body:{
     backgroundColor: 'black',
   },
@@ -104,9 +122,13 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     fontSize: 30
   },
+  background:{
+    flex: 1,
+    resizeMode: "cover",
+  },
   container: {
     flex: 1,
-    backgroundColor: '#808080' ,
+    backgroundColor: 'lime' ,
     justifyContent: 'center',
     alignItems: 'center',
 
@@ -129,7 +151,9 @@ const styles = StyleSheet.create({
     borderRadius: 3,
   },
   a:{
-    color: 'white'
+    display: 'flex',
+    color: '#39FF14',
+    justifyContent: 'center'
   },
   logo: {
     width: 150,
