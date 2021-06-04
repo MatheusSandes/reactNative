@@ -1,10 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
-import React, {Component, useState, useEffect} from 'react';
-import { StyleSheet, Image,TextInput, Text, View,ScrollView, TouchableOpacity, ImageBackground } from 'react-native';
-import { Credentials } from '../components/Credentials'
-import axios from 'axios'
+import React, {Component} from 'react';
+import { Text, View,ScrollView, ImageBackground } from 'react-native';
 import styles from '../Styles.js'
-var base64 = require('base-64');
+
 
 import Album from './Album'
 
@@ -14,7 +11,6 @@ export default class ResultsScreen extends Component {
   }
 
   render() {
-    const image = {uri: "https://www.instagram.com/p/BoXsdq4HAUm00_43QhKvEDzdSEMDz2S-o0I29E0/"}
     const { navigation } = this.props;
     let albumsList = navigation.getParam('AlbumsList')
     if (albumsList && albumsList != "") {
@@ -22,9 +18,9 @@ export default class ResultsScreen extends Component {
             <ImageBackground source={require('../components/spotify-theme-music-bkg-dark.png')} style={styles.background}>
                 <ScrollView>
                        <View>
-                                {albumsList.map(album => ( 
-                                    <Album album={album} token={navigation.getParam('Token')} key={album.id}/> 
-                                ))}
+                            {albumsList.map(album => ( 
+                                <Album album={album} token={navigation.getParam('Token')} key={album.id} navigation={this.props.navigation}/> 
+                            ))}
                         </View>
                </ScrollView>
             </ImageBackground>

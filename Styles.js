@@ -3,7 +3,8 @@ const styles = StyleSheet.create({
   album:{
     marginTop: 5,
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)'
   },
   logoImg:{
     display: "flex",

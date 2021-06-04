@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import React, {Component, useState, useEffect} from 'react';
-import { StyleSheet, Image,TextInput, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
+import React, {Component} from 'react';
+import { TextInput, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import { Credentials } from '../components/Credentials'
 import axios from 'axios'
 import styles from '../Styles.js'
