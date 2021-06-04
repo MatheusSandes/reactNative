@@ -19,7 +19,7 @@ export default class ResultsScreen extends Component {
     let albumsList = navigation.getParam('AlbumsList')
     if (albumsList && albumsList != "") {
         return (
-            <ImageBackground source={require('../components/matheus_sem_camisa.jpg')} style={styles.background}>
+            <ImageBackground source={require('../components/spotify-theme-music-bkg-dark.png')} style={styles.background}>
                 <ScrollView>
                        <View>
                                 {albumsList.map(album => ( 

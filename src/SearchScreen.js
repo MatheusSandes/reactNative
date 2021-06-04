@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {Component, useState, useEffect} from 'react';
-import { StyleSheet, Image,TextInput, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Image,TextInput, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
 import { Credentials } from '../components/Credentials'
 import axios from 'axios'
 import styles from '../Styles.js'
@@ -49,19 +49,20 @@ export default class SearchScreen extends Component {
   
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.titulo}>Almostify</Text>
-        <TextInput 
-          style={styles.input} 
-          onChangeText={inputAlbum => this.setState( {inputAlbum} )} 
-          placeholder="Digite o nome do album ou artista"
-        /> 
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => {this.pressed()}}>
-          <Text style={styles.buttonText}>Pesquisar</Text>
-        </TouchableOpacity>
-      </View>
+        <ImageBackground source={require('../components/spotify-theme-music-bkg-dark.png')} style={styles.backgroundSearch}>
+          <Text style={styles.titulo}>Almostify</Text>
+          <TextInput 
+            style={styles.input} 
+            onChangeText={inputAlbum => this.setState( {inputAlbum} )} 
+            placeholder="Digite o nome do album ou artista"
+          /> 
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => {this.pressed()}}>
+            <Text style={styles.buttonText}>Pesquisar</Text>
+          </TouchableOpacity>
+        </ImageBackground>
+      
     );
   };
 }

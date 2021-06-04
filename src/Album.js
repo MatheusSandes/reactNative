@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Image, TouchableOpacity, Linking } from 'react-native';
+import { Text, View, Image, TouchableOpacity, Linking, Card } from 'react-native';
 import axios from 'axios'
 
 import styles from '../Styles'
@@ -31,7 +31,8 @@ export default class Album extends Component {
   render () {
     return (
         <View style={styles.album}>
-            <View > 
+            <View style={{flexDirection:"row"}}> 
+                <TouchableOpacity onPress={() => Linking.openURL(this.props.album.external_urls.spotify)}>
                 <Image 
                 source={{uri: this.props.album.images[1].url}} 
                 style={{
@@ -39,20 +40,16 @@ export default class Album extends Component {
                     height: 150,
                     borderRadius: 10,
                     alignSelf: 'center',
-                }}/>
+                }}
+                />
+                </TouchableOpacity> 
                 <View style={styles.makeColumn}>
                     <Text style={styles.infoText}>Artista: {this.props.album.artists[0].name} </Text>
-                    <Text style={styles.infoText}>Nome do album: {this.props.album.name}</Text>
+                    <Text style={styles.infoText}>Album: {this.props.album.name}</Text>
                     <Text style={styles.infoText}>Data de lançamento: {this.props.album.release_date}</Text>
                     <Text style={styles.infoText}>Número de músicas: {this.props.album.total_tracks}</Text>
-                    <View style = {{flexDirection:'row'}}>
-                    <Text style={styles.infoText2}>
-                        Link do album no spotify: { } 
-                        <Text 
-                            style={styles.a} onPress={() => Linking.openURL(this.props.album.external_urls.spotify)}>
-                            {this.props.album.external_urls.spotify}
-                        </Text>
-                    </Text> 
+                    <View>
+                    
                     </View>
                     <TouchableOpacity 
                         style={styles.tracksButton} 

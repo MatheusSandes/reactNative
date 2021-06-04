@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   album:{
+    marginTop: 5,
     marginLeft: 'auto',
     marginRight: 'auto'
   },
@@ -41,6 +42,7 @@ const styles = StyleSheet.create({
   },
   infoText:{
     color: 'white',
+    alignItems: 'flex-start'
     //marginTop: 20,
     //marginLeft: 10,
   },
@@ -54,8 +56,6 @@ const styles = StyleSheet.create({
   makeColumn:{
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
     margin: '6%',
   },
   tracksButton:{
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginTop: 10,
     marginLeft: 10,
-    alignSelf: 'center'
+    
   },
   
   track :{
@@ -126,9 +126,14 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
   },
+  backgroundSearch:{
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   container: {
     flex: 1,
-    backgroundColor: 'lime' ,
     justifyContent: 'center',
     alignItems: 'center',
 

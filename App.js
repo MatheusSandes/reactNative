@@ -17,10 +17,14 @@ export default class App extends Component {
 
 const AppNavigator = createStackNavigator({
   Search: {
-    screen: SearchScreen
+    screen: SearchScreen,
+    navigationOptions: {
+      header: null,
+    }
   },
   Results: {
-    screen: ResultsScreen
+    screen: ResultsScreen,
+    
   }
 },
   {
