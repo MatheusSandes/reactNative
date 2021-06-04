@@ -24,8 +24,6 @@ export default class ResultsScreen extends Component {
                         </View>
                </ScrollView>
             </ImageBackground>
-
-            
         );
     }
     else {
