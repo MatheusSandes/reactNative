@@ -28,10 +28,12 @@ export default class ResultsScreen extends Component {
     }
     else {
         return (
-            <View style={styles.container}>
-                <Text style={styles.infoText}>Nenhum resultado encontrado.</Text>
-            </View>
-        )
+            <ImageBackground source={require('../components/spotify-theme-music-bkg-dark.png')} style={styles.background}>
+                <View style={styles.container}>
+                    <Text style={styles.infoText}>Nenhum resultado encontrado.</Text>
+                </View>
+            </ImageBackground>
+        );
     }
   };
 }
