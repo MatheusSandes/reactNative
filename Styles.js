@@ -42,14 +42,17 @@ const styles = StyleSheet.create({
     width: 70,
   },
   infoText:{
+    display: 'flex',
     color: 'white',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    justifyContent: 'center'
+    
     //marginTop: 20,
     //marginLeft: 10,
   },
   infoText2:{
     display: 'flex',
-    color: 'white',
+    color: '#00FF00',
     //marginTop: 20,
     alignItems: 'flex-start',
 
@@ -117,7 +120,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
   titulo:{
-    color: '#000000',
+    color: '#00FF00',
     height: 50,
     justifyContent: 'center',
     fontWeight:'bold',

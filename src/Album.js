@@ -30,7 +30,7 @@ export default class Album extends Component {
 
     pressed = async(id) => {
         await this.fetchTracks(this.props.album.id)
-        this.props.navigation.navigate('Tracks', {AlbumTracks: this.state.albumTracks, AlbumImage: this.props.album.images[1].url, Token: this.props.token})
+        this.props.navigation.navigate('Tracks', {AlbumTracks: this.state.albumTracks, AlbumImage: this.props.album.images[0].url, Token: this.props.token})
     }
 
 
@@ -50,14 +50,14 @@ export default class Album extends Component {
                         />
                     </TouchableOpacity> 
                     <View style={styles.makeColumn}>
-                        <Text style={styles.infoText}>Artista: {this.props.album.artists[0].name} </Text>
-                        <Text style={styles.infoText}>Album: {this.props.album.name}</Text>
-                        <Text style={styles.infoText}>Data de lançamento: {this.props.album.release_date}</Text>
-                        <Text style={styles.infoText}>Número de músicas: {this.props.album.total_tracks}</Text>
+                        <Text style={styles.infoText}>Artista:{'\n'}<Text style={styles.texto1}>{this.props.album.artists[0].name}</Text></Text>
+                        <Text style={styles.infoText}>Album:{'\n'}<Text style={styles.texto2}>{this.props.album.name}</Text></Text>
+                        <Text style={styles.infoText}>Data de lançamento:{'\n'}{ this.props.album.release_date}</Text>
+                        <Text style={styles.infoText}>Número de músicas:{'\n'}{this.props.album.total_tracks}</Text>
                         <TouchableOpacity 
                             style={styles.tracksButton} 
                             onPress={(e) => this.pressed()}>
-                            <Text style={styles.infoText}>Ver músicas</Text> 
+                            <Text style={styles.infoText2}>Ver músicas</Text> 
                         </TouchableOpacity>
                     </View>
                 </View>

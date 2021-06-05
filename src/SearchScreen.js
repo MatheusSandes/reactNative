@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { TextInput, Text, TouchableOpacity, ImageBackground } from 'react-native';
+import { TextInput,Image, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import { Credentials } from '../components/Credentials'
 import axios from 'axios'
 import styles from '../Styles.js'
@@ -49,6 +49,7 @@ export default class SearchScreen extends Component {
   render() {
     return (
         <ImageBackground source={require('../components/spotify-theme-music-bkg-dark.png')} style={styles.backgroundSearch}>
+          <Image style={styles.logo} source={require('../components/spotify.png')}></Image>
           <Text style={styles.titulo}>Almostify</Text>
           <TextInput 
             style={styles.input} 
