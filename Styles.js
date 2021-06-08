@@ -4,7 +4,8 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginLeft: 'auto',
     marginRight: 'auto',
-    backgroundColor: 'rgba(255, 255, 255, 0.2)'
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    borderRadius: 10,
   },
   logoImg:{
     display: "flex",
@@ -78,6 +79,7 @@ const styles = StyleSheet.create({
   },
   
   track :{
+    borderRadius: 10,
     justifyContent: 'center',
     marginTop: 10,
     marginLeft: '5%',
@@ -120,9 +122,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     fontWeight:'bold',
     fontSize: 30,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    borderRadius: 10,
   },
   background:{
+    
     flex: 1,
     resizeMode: "cover",
   },
@@ -142,8 +146,7 @@ const styles = StyleSheet.create({
     color: '#f8f8ff',
     justifyContent: 'flex-end',
     flex: 1,
-    flexShrink: 1,
-    flexWrap: 'wrap',
+    
     fontSize: 20
   },
   b:{

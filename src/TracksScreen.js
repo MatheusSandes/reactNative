@@ -20,6 +20,7 @@ export default class TracksScreen extends Component {
                     style={{
                         width: 150,
                         height: 150,
+                        marginTop: 10,
                         borderRadius: 10,
                         alignSelf: 'center',
                     }}

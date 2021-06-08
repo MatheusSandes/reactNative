@@ -44,6 +44,8 @@ export default class Album extends Component {
                             style={{
                                 width: 150,
                                 height: 150,
+                                marginTop: 30,
+                                marginLeft: 5,
                                 borderRadius: 10,
                                 alignSelf: 'center',
                             }}
