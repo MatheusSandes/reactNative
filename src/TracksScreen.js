@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Text, Image, ScrollView, ImageBackground } from 'react-native';
+import { Text, Image, ScrollView, Linking,  ImageBackground, View } from 'react-native';
 import styles from '../Styles.js'
 
 import Track from './Track'
@@ -24,6 +24,7 @@ export default class TracksScreen extends Component {
                         alignSelf: 'center',
                     }}
                 />
+                <Text style={styles.titulo} onPress={() => Linking.openURL(navigation.getParam('AlbumLink'))}>{navigation.getParam('AlbumName')}</Text>
                 {albumTracks.map(track => ( 
                     <Track track={track} token={navigation.getParam('Token')} key={track.id}/> 
                 ))}

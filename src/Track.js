@@ -35,9 +35,14 @@ export default class Track extends Component {
 
     render () {
         return (
-            <View style={styles.album}>
+            <View style={styles.track}>
                 <View style={styles.makeColumn}>
-                    <Text style={styles.infoText, {'color': 'lightblue'}} onPress={() => Linking.openURL(this.state.trackInfo.uri)}>Música: {this.state.trackInfo.name}</Text>
+                    <Text style={styles.infoText}>Música:{' '} 
+                        <Text style={styles.infoText, {'color': '#00ff00'}} 
+                        onPress={() => Linking.openURL(this.state.trackInfo.uri)}>
+                            {this.state.trackInfo.name}
+                        </Text>
+                    </Text>
                     <Text style={styles.infoText}>Duração: {this.state.trackInfo.duration}</Text>
                     <Text style={styles.infoText}>Popularidade: {this.state.trackInfo.popularity}</Text>
                 </View>

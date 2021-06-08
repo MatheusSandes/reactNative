@@ -1,10 +1,10 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   album:{
-    marginTop: 5,
+    marginTop: 15,
     marginLeft: 'auto',
     marginRight: 'auto',
-    backgroundColor: 'rgba(255, 255, 255, 0.5)'
+    backgroundColor: 'rgba(255, 255, 255, 0.2)'
   },
   logoImg:{
     display: "flex",
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   button: {
     width: 300,
     height: 42,
-    backgroundColor: '#cd853f',
+    backgroundColor: '#00FF00',
     marginTop: 10,
     borderRadius: 5,
     alignItems: 'center',
@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     color: 'white',
     alignItems: 'flex-start',
-    justifyContent: 'center'
-    
+    justifyContent: 'center',
+    flexWrap: 'wrap',
     //marginTop: 20,
     //marginLeft: 10,
   },
@@ -79,15 +79,10 @@ const styles = StyleSheet.create({
   
   track :{
     justifyContent: 'center',
-    color: '#fff',
-    padding: 10,
-    width: 20,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    backgroundColor: 'gray',
     marginTop: 10,
-    marginBottom: 5,
-    
+    marginLeft: '5%',
+    marginRight: '5%',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)'
   },
   
   
@@ -124,7 +119,8 @@ const styles = StyleSheet.create({
     height: 50,
     justifyContent: 'center',
     fontWeight:'bold',
-    fontSize: 30
+    fontSize: 30,
+    alignSelf: 'center'
   },
   background:{
     flex: 1,
@@ -145,7 +141,10 @@ const styles = StyleSheet.create({
   texto1:{
     color: '#f8f8ff',
     justifyContent: 'flex-end',
-    fontSize: 24
+    flex: 1,
+    flexShrink: 1,
+    flexWrap: 'wrap',
+    fontSize: 20
   },
   b:{
     marginRight: 5,
